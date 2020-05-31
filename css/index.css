@@ -1,0 +1,526 @@
+@charset "UTF-8";
+/*!
+ * Bootstrap v4.2.1 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+:root {
+  --blue: #045bc1;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #d0021b;
+  --orange: #fd7e14;
+  --yellow: #f37f29;
+  --green: #7ed321;
+  --teal: #20c997;
+  --cyan: #00d6ff;
+  --white: #fff;
+  --gray: #7F7F7F;
+  --gray-dark: #555555;
+  --primary: #045bc1;
+  --secondary: #666666;
+  --success: #7ed321;
+  --info: #00d6ff;
+  --warning: #f37f29;
+  --danger: #d0021b;
+  --light: #fafafa;
+  --dark: #1c1c1c;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+
+
+
+a {
+  color: #045bc1;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #023876;
+  text-decoration: underline;
+}
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+
+/*-----------------------------------------------
+|   Fancynav
+-----------------------------------------------*/
+.fancynavbar {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
+  font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+@media (min-width: 992px) {
+  .fancynavbar {
+    right: 0;
+    height: 100vh;
+    width: 4.375rem;
+  }
+  .fancynavbar.fancynavbar-left {
+    left: 0;
+    right: auto;
+  }
+}
+
+/*-----------------------------------------------
+|   Fancy Navbar
+-----------------------------------------------*/
+.fancynavbar-togglerbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media (max-width: 991.98px) {
+  .fancynavbar-togglerbar {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .fancynavbar-togglerbar {
+    height: 100%;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #000;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+/*-----------------------------------------------
+|   Fancy Navbar Brand
+-----------------------------------------------*/
+.fancynavbar-brand {
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+.fancynavbar-brand-img {
+  opacity: 1 !important;
+}
+
+/*-----------------------------------------------
+|   Fancy Navbar Toggler
+-----------------------------------------------*/
+.fancynavbar-toggler {
+  cursor: pointer;
+  width: 4.375rem;
+  height: 4.375rem;
+  opacity: 1 !important;
+}
+
+@media (max-width: 991.98px) {
+  .fancynavbar-toggler {
+    -webkit-transform: translateY(4%);
+    -ms-transform: translateY(4%);
+    transform: translateY(4%);
+  }
+}
+
+.fancynavbar-toggler-icon path {
+  fill: none;
+  stroke: #ff3300;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+}
+
+/*-----------------------------------------------
+|   Fancy Navbar Addon
+-----------------------------------------------*/
+.fancynavbar-addon {
+  padding-left: 0;
+}
+
+@media (max-width: 991.98px) {
+  .fancynavbar-addon {
+    display: none !important;
+  }
+}
+
+.fancynavbar-addon-item {
+  display: block;
+  color: #fafafa;
+  margin-top: 0.5rem;
+  font-size: 1.333rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.fancynavbar-addon-item:hover, .fancynavbar-addon-item:focus {
+  color: rgba(250, 250, 250, 0.75);
+}
+
+/*-----------------------------------------------
+|   Fancy Navbar Collapse
+-----------------------------------------------*/
+.fancynavbar-collapse {
+  height: 100vh;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  position: absolute;
+  text-align: left;
+  width: calc(50vw - 2.1875rem);
+  right: calc(50% + 2.1875rem);
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  top: 0;
+  padding: 0;
+  z-index: -1;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background-color: #000;
+  opacity: 0.92;
+}
+
+@media (max-width: 991.98px) {
+  .fancynavbar-collapse {
+    width: 100vw;
+    top: 3rem;
+    right: 0;
+    height: calc(100vh - 3rem);
+  }
+}
+
+@media (min-width: 992px) {
+  .fancynavbar-collapse {
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+  }
+}
+
+.fancynavbar-left .fancynavbar-collapse {
+  left: calc(50% + 2.1875rem);
+  right: auto;
+}
+
+@media (max-width: 991.98px) {
+  .fancynavbar-left .fancynavbar-collapse {
+    left: 0;
+  }
+}
+
+/*-----------------------------------------------
+|   Fancy Navbar Nav
+-----------------------------------------------*/
+.fancynavbar-nav {
+  height: auto;
+  width: 100%;
+  list-style-type: none;
+  list-style-image: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto 0;
+}
+
+@media (min-width: 992px) {
+  .fancynavbar-nav {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/*-----------------------------------------------
+|   Fancy Navbar Link
+-----------------------------------------------*/
+.fancynav-link {
+  position: relative;
+  display: block;
+  font-size: 1.777rem;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .fancynav-link {
+    font-size: 2.369rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fancynav-link {
+    font-size: 2.369rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .fancynav-link {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}
+
+.fancynav-link:before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 0;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 2px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 0;
+}
+
+.fancynav-link.fancy-dropdown-toggle .fancynav-link-content {
+  padding-right: 3rem;
+}
+
+.fancynav-link.fancy-dropdown-toggle .fancynav-link-content:after {
+  position: absolute;
+  left: calc(100% - 2.1875rem);
+  top: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.33 7.03"><defs><style>.cls-1{fill:rgba(255, 255, 255, 0.85);}</style></defs><title>Asset 9sparrow</title><g id="Layer_2" data-name="Layer 2"><g id="Capa_1" data-name="Capa 1"><path class="cls-1" d="M6.17,7a.86.86,0,0,1-.61-.25L.25,1.47A.86.86,0,1,1,1.47.25L6.17,4.95,10.86.25a.86.86,0,0,1,1.22,1.22l-5.3,5.3A.86.86,0,0,1,6.17,7Z"/></g></g></svg>');
+  text-align: center;
+  color: white;
+  width: 15px;
+  height: 10px;
+  background-color: transparent;
+  z-index: 99;
+}
+
+.fancynav-link.show:before {
+  width: 100%;
+}
+
+.fancynav-link.show .fancynav-link-content:after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.5 9.41"><defs><style>.cls-1{fill:rgba(255, 255, 255, 0.85);}</style></defs><title>Asset 6sparrow</title><g id="Layer_2" data-name="Layer 2"><g id="Capa_1" data-name="Capa 1"><path class="cls-1" d="M8.25,0a1.15,1.15,0,0,1,.82.34l7.09,7.09a1.16,1.16,0,0,1-1.63,1.63L8.25,2.79,2,9.07A1.16,1.16,0,1,1,.34,7.43L7.43.34A1.15,1.15,0,0,1,8.25,0Z"/></g></g></svg>');
+}
+
+/*-----------------------------------------------
+|   Fancy Navbar Link Content
+-----------------------------------------------*/
+.fancynav-link-content {
+  color: rgba(255, 255, 255, 0.85);
+  background-color: #000;
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+/*-----------------------------------------------
+|   Fancy Navbar Item
+-----------------------------------------------*/
+.fancynav-item {
+  overflow: hidden;
+  -webkit-transition: height 0.4s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: height 0.4s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: height 0.4s cubic-bezier(0.77, 0, 0.18, 1);
+  height: 41px;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .fancynav-item {
+    height: 54px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fancynav-item {
+    height: 54px;
+  }
+}
+
+.fancynav-item:hover .fancynav-link-content, .fancynav-item:focus .fancynav-link-content {
+  text-decoration: none;
+  color: #fff;
+}
+
+.fancynav-item:hover .fancynav-link:before, .fancynav-item:focus .fancynav-link:before {
+  width: 100%;
+}
+
+/*-----------------------------------------------
+|   Fancy Dropdown
+-----------------------------------------------*/
+.fancy-dropdown-menu {
+  -webkit-transition: height 0.2s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: height 0.2s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: height 0.2s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+@media (max-width: 991.98px) {
+  .fancy-dropdown-menu {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding-right: 1.8rem;
+    padding-left: 1.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .fancy-dropdown-menu {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+}
+
+/*-----------------------------------------------
+|   Fancy Dropdown Item
+-----------------------------------------------*/
+.fancy-dropdown-item {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 700;
+  display: block;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.fancy-dropdown-item:hover, .fancy-dropdown-item:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+s
+
+
+
+
+/*-----------------------------------------------
+|   Input File
+-----------------------------------------------*/
+input.zinput-file[type='file'] {
+  display: none;
+}
+
+.zinput-file + label svg {
+  fill: currentColor;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+
+
+
+
+
+
+
+/*-----------------------------------------------
+|   Navigation bar
+-----------------------------------------------*/
+.navbar {
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.01em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+
+
+
+/*-----------------------------------------------
+|   Font family, Position and Overflow [NTR]
+-----------------------------------------------*/
+.overflow-hidden, .overflow-hidden-x {
+  overflow-x: hidden;
+}
+
+.overflow-hidden, .overflow-hidden-y {
+  overflow-y: hidden;
+}
+
+
+/*-----------------------------------------------
+|   Zanimation
+-----------------------------------------------*/
+*[data-zanim-trigger] {
+  opacity: 0;
+}
+
+
+
+
+
+/*-----------------------------------------------
+|   Puppeteer
+-----------------------------------------------*/
+.puppeteer .fancynavbar {
+  display: none !important;
+}
+
